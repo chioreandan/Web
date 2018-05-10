@@ -1,84 +1,120 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <title>Bootstrap 4 Layout</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
+<head>
+	<title>Bootstrap 4 Layout</title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <body>
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+	<link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
 
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="#">CompanyName</a>
-                
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Products</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href ="#">Product1</a>
-                                <a class="dropdown-item" href ="#">Product2</a>
-                                <a class="dropdown-item" href ="#">Product3</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="jumbotron">
-                <h1 class="display-4">Simple. Elegant. Awesome.</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                </p>
-                
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title</p>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title</p>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title</p>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+<body>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="#">CompanyName</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Products</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Product1</a>
+							<a class="dropdown-item" href="#">Product2</a>
+							<a class="dropdown-item" href="#">Product3</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<section class="jumbotron-wrapper">
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="display-4">Simple. Elegant. Awesome.</h1>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<p class="lead">
+					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="card-container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<div class="card-body text-center">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title</p>
+							<p class="lead">
+								<a class="btn btn-primary btn-lg" href="#" role="button">Button</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="card">
+						<div class="card-body text-center">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title</p>
+							<button type="button" class="btn btn-dark" href="#">Dark</button>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<div class="card-body text-center">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title</p>
+							<a href="#" class="card-link">Another link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<section class="image-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 image-hover mx-auto">
+					<a href="#">
+						<img src="res_d7d63673fac35dac5f93604c4a7bd059_450x450_5t3l.jpg" class="img image-style">
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 mx-auto image-hover">
+					<a href="#">
+						<img src="res_d7d63673fac35dac5f93604c4a7bd059_450x450_5t3l.jpg" class="img image-style">
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 mx-auto image-hover">
+					<a href="#">
+						<img src="res_d7d63673fac35dac5f93604c4a7bd059_450x450_5t3l.jpg" class="img image-style">
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</body>
