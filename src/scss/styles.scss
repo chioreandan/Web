@@ -2,35 +2,73 @@
 $theme-colors: (
   "primary": #d95700
 );
-
-
 .card-container{
     margin-top: 10px;
     
-}
-.jumbotron-wrapper{
-
 }
 .image-wrapper{
     margin-top: 50px;
     margin-bottom: 10px;
 }
 .image-hover:hover{
-    /*opacity: 0.3;*/
     transform: scale(1.25);
-    
+    opacity: 0.5;    
 }
 .image-style{
     width: 100%;
 }
 .image-hover{
+    
     transform:scale(1);
-    transition: 0.3s ease;
+    transition: 0.3s ease; 
 }
-.image-hover:nth-of-type(1){
-    opacity: 10%;
+nav.navbar{
+    padding-top:0;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
     
 }
 
+h1,
+.navbar-brand,
+.navbar-nav a {
+  font-family: "Raleway", sans-serif;
+  color:white;
+}
+.jumbotron {
+    background-image: url("../css/restaurante-cluj.jpg");
+    color:white;
+    font-family: "Raleway", sans-serif;
+    margin-bottom:20;
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-top: 90px !important;
+}
+
+.jumbotron{
+    .container{
+        h1{
+            text-align: center;
+        }
+        p{
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+  }
+  br {
+    //display: block;
+    margin: 0 0;
+ }
+  
+
+ 
+  
+  
 @import "node_modules/bootstrap/scss/bootstrap";
 

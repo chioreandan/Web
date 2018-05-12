@@ -49,7 +49,8 @@ h1,
   text-align: center; }
 
 br {
-  margin: 0 0; }
+  display: block;
+  margin: 0.0001px 0; }
 
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
