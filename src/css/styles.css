@@ -20,14 +20,15 @@ nav.navbar {
   padding-top: 0;
   margin-bottom: 10px;
   margin-top: 20px;
-  margin-right: 40px;
-  margin-left: 40px; }
+  margin-right: 120px;
+  margin-left: 120px; }
 
 h1,
 .navbar-brand,
 .navbar-nav a {
   font-family: "Raleway", sans-serif;
-  color: white; }
+  color: white;
+  font-size: 12px; }
 
 .jumbotron {
   background-image: url("../css/restaurante-cluj.jpg");
