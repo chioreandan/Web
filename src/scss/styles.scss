@@ -1,10 +1,13 @@
 
 $theme-colors: (
-  "primary": #d95700
+  "primary": #fe8301
 );
+
+    $body-bg: #f2f2f2;
+
 .card-container{
     margin-top: 10px;
-    
+  
 }
 .image-wrapper{
     margin-top: 50px;
@@ -28,6 +31,10 @@ nav.navbar{
     margin-top: 20px;
     margin-right: 120px;
     margin-left: 120px;
+
+}
+.navbar-brand{
+    font-size: 12px !important;
 }
 
 h1,
@@ -36,34 +43,87 @@ h1,
   font-family: "Raleway", sans-serif;
   color:white;
   font-size:12px;
+  margin-right: 10px;
+  margin-left:10px; 
+  font-weight: 900 ;
+  
+  
 }
 .jumbotron {
     background-image: url("../css/restaurante-cluj.jpg");
     color:white;
     font-family: "Raleway", sans-serif;
     margin-bottom:20;
-    min-height: 400px;
+    min-height: 500px;
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    padding-top: 90px !important;
+   
 }
 
 .jumbotron{
     .container{
         h1{
             text-align: center;
+            padding-top:60px;
+            font-weight: bolder;
         }
         p{
             margin-top: 20px;
             text-align: center;
+            font-weight: 700px;
+            margin-top: 50px;
+
         }
     }
   }
-  br {
-    margin: 0 0;
- }
+
+  .navbar-default{
+    transition:500ms ease;
+    background:transparent;
+}
+.navbar-default.scrolled{
+    background-color: #fff;
+    margin: 0 0 0 0;
+    padding-top:10px;  
+}
+.navbar-default.scrolled{
+    h1, .navbar-brand, .navbar-nav a{
+        color: black;
+    }
+}
+@media (min-width: 768px) { 
+    .navbar-nav > li {
+        position: relative
+    }
+    .navbar-nav > li:before,
+    .navbar-nav > li::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height:3px;
+        background:#fe8301;
+        top: 50%;
+        margin-top: -2px;
+        right: -3px;
+        z-index: 1;
+        border-radius: 6px;
+    } 
+      
+}
+@media (min-width: 768px) { 
+    
+    .navbar-nav > li:before,
+    .navbar-nav > li:last-of-type:after {
+        content: none;
+        
+    } 
+      
+}
+
+
+
 
 
  
