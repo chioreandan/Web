@@ -23,9 +23,9 @@ var menu={
 
 var wrapper = $('#wrapper'), container;
 for (var key in menu){
-    container = $('<div id="grocery_item" class="container col-3"></div>');
+    container = $('<div id="grocery_item" class="container col-3 image-hover"></div>');
     wrapper.append(container);
-    container.append('<div class="menu-image"><a href="#"><img src='+menu[key].pictureUrl+'></a></div>');
+    container.append('<div class="menu-image"><a href="#"><img src="'+menu[key].pictureUrl+'""></a></div>');
     container.append('<div class="item">' + key +'</div>');
     container.append('<div class="category">' + menu[key].category +'</div>');
     container.append('<div class="price">&#36; ' + menu[key].price +'</div>');
