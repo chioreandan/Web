@@ -101,7 +101,8 @@ h1,
   background-color: #f2f2f2;
   margin: 0 0 0 0;
   color: black;
-  display: block; }
+  display: block;
+  height: 50px; }
 
 .nav-div {
   display: block;
@@ -186,16 +187,19 @@ nav.bar-wrapper {
   padding-bottom: 20px; }
 
 .slider-nav {
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 250px;
-  height: 20px; }
+  /* margin-top: auto;
+    margin-bottom: auto;
+   
+    width: 250px;
+    height: 20px;*/
+  display: flex;
+  align-items: center; }
 
 #nav-price {
   display: block;
   font-size: 12px;
   font-weight: 800;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 0;
   margin-right: 0;
   margin-left: auto;

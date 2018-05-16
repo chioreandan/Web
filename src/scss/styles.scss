@@ -10,21 +10,17 @@ $font: "Raleway";
 
 .image-hover:hover {
     transform: scale(1.25);
-    
-    
 }
-.row{
-    .del-btn{
-        button{
+
+.row {
+    .del-btn {
+        button {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-        
     }
 }
-
-
 
 .image-style {
     width: 100%;
@@ -33,7 +29,6 @@ $font: "Raleway";
 .image-hover {
     transform: scale(1);
     transition: 0.3s ease;
-   
 }
 
 nav.navbar {
@@ -139,6 +134,7 @@ h1,
     margin: 0 0 0 0;
     color: black;
     display: block;
+    height: 50px;
 }
 
 .nav-div {
@@ -228,6 +224,7 @@ nav.bar-wrapper {
     margin-top: 50px;
     font-family: "Raleway", sans-serif;
     margin-bottom: 1000px;
+    
 }
 
 .row {
@@ -243,26 +240,29 @@ nav.bar-wrapper {
         padding-bottom: 20px;
     }
 }
-.slider-nav{
-    margin-top: auto;
+
+.slider-nav {
+    /* margin-top: auto;
     margin-bottom: auto;
    
     width: 250px;
-    height: 20px;
+    height: 20px;*/
+   
+    display: flex;
+    align-items: center;
 }
-#nav-price{
+
+#nav-price {
     display: block;
     font-size: 12px;
     font-weight: 800;
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
     margin-left: auto;
     font-family: $font;
     color: black;
-   
 }
-
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
