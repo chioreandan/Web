@@ -6,6 +6,11 @@
 .image-hover:hover {
   transform: scale(1.25); }
 
+.row .del-btn button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 .image-style {
   width: 100%; }
 
@@ -38,7 +43,7 @@ h1,
   color: white;
   font-family: "Raleway", sans-serif;
   margin-bottom: 0px;
-  min-height: 100%;
+  min-height: 600px;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -179,6 +184,23 @@ nav.bar-wrapper {
   border-width: 3px;
   border-color: #f2f2f2;
   padding-bottom: 20px; }
+
+.slider-nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 250px;
+  height: 20px; }
+
+#nav-price {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: auto;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: auto;
+  font-family: "Raleway";
+  color: black; }
 
 section {
   padding: 60px 0; }
