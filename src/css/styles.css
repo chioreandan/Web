@@ -4,7 +4,10 @@
   margin-bottom: 10px; }
 
 .image-hover:hover {
-  transform: scale(1.25); }
+  transform: scale(1.25);
+  z-index: 2; }
+  .image-hover:hover .col-3:not(:hover) {
+    opacity: 0.2; }
 
 .row .del-btn button {
   display: block;
@@ -173,7 +176,7 @@ nav.bar-wrapper {
   margin-left: 150px;
   margin-top: 50px;
   font-family: "Raleway", sans-serif;
-  margin-bottom: 1000px; }
+  margin-bottom: 200px; }
 
 .row .col-3:not(:nth-of-type(4n+0)) {
   border-right: solid;
@@ -184,7 +187,8 @@ nav.bar-wrapper {
   border-bottom: solid;
   border-width: 3px;
   border-color: #f2f2f2;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  background-color: white; }
 
 .slider-nav {
   /* margin-top: auto;
@@ -201,10 +205,27 @@ nav.bar-wrapper {
   font-weight: 800;
   margin-top: 0;
   margin-bottom: 0;
-  margin-right: 0;
+  margin-right: 90px;
   margin-left: auto;
   font-family: "Raleway";
   color: black; }
+
+.slider-wrapper .slider {
+  -webkit-appearance: none;
+  border: 0 0 0 0;
+  width: 200px;
+  margin-right: 0;
+  margin-left: 0;
+  height: 25px;
+  background: white;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s; }
+
+#myRange {
+  margin-right: -80px;
+  overflow: hidden; }
 
 section {
   padding: 60px 0; }

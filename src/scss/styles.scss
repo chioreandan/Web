@@ -10,6 +10,10 @@ $font: "Raleway";
 
 .image-hover:hover {
     transform: scale(1.25);
+    z-index: 2;
+    .col-3:not(:hover) {
+        opacity: 0.2;
+    }
 }
 
 .row {
@@ -223,8 +227,7 @@ nav.bar-wrapper {
     margin-left: 150px;
     margin-top: 50px;
     font-family: "Raleway", sans-serif;
-    margin-bottom: 1000px;
-    
+    margin-bottom: 200px;
 }
 
 .row {
@@ -238,6 +241,7 @@ nav.bar-wrapper {
         border-width: 3px;
         border-color: $secondary-color;
         padding-bottom: 20px;
+        background-color: $body-bg; //z-index: -1;
     }
 }
 
@@ -247,7 +251,6 @@ nav.bar-wrapper {
    
     width: 250px;
     height: 20px;*/
-   
     display: flex;
     align-items: center;
 }
@@ -258,10 +261,31 @@ nav.bar-wrapper {
     font-weight: 800;
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: 0;
+    margin-right: 90px;
     margin-left: auto;
     font-family: $font;
     color: black;
+}
+
+.slider-wrapper {
+    .slider {
+        -webkit-appearance: none;
+        border: 0 0 0 0;
+        width: 200px;
+        margin-right: 0;
+        margin-left: 0;
+        height: 25px;
+        background: $body-bg;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+}
+
+#myRange {
+    margin-right: -80px;
+    overflow: hidden;
 }
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');

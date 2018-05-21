@@ -22,6 +22,7 @@ self.multirange = function(input) {
 	input.value = values[0] || min + (max - min) / 2;
 	ghost.value = values[1] || min + (max - min) / 2;
 
+
 	input.parentNode.insertBefore(ghost, input.nextSibling);
 
 	Object.defineProperty(input, "originalValue", descriptor.get ? descriptor : {
@@ -55,6 +56,7 @@ self.multirange = function(input) {
 			},
 			enumerable: true
 		});
+		console.log()
 	}
 
 	if (typeof input.oninput === "function") {
@@ -82,5 +84,4 @@ if (document.readyState == "loading") {
 else {
 	multirange.init();
 }
-
 })();
