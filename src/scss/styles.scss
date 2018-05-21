@@ -221,13 +221,24 @@ nav.bar-wrapper {
         margin-right: auto;
     }
 }
-
-#wrapper {
+#buton-but{
+    width:100px;
+    height: 40px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+.wrapper {
     margin-right: 150px;
     margin-left: 150px;
     margin-top: 50px;
     font-family: "Raleway", sans-serif;
     margin-bottom: 200px;
+}
+#reinit-btn{
+    margin-bottom: 200px;
+    margin-left:500px;
+    width:200px;
+    height: 200px;
 }
 
 .row {
@@ -248,7 +259,7 @@ nav.bar-wrapper {
 .slider-nav {
     /* margin-top: auto;
     margin-bottom: auto;
-   
+
     width: 250px;
     height: 20px;*/
     display: flex;

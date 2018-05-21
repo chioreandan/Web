@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
   });
 
-  let menu = [{
+  /*let menu = [{
       name: 'American Burger',
       category: "Burgers",
       price: "17.29",
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       pictureUrl: "../menu/pizzaCasei.jpg"
     }
   ]
-  localStorage.setItem("savedMenu", JSON.stringify(menu));
+  localStorage.setItem("savedMenu", JSON.stringify(menu));*/
 
 
   function printItems(menu) {

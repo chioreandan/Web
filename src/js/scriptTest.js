@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         pictureUrl: "../menu/pizzaCasei.jpg"
     }
     ]
-    let ls = localStorage.setItem("savedMenu", JSON.stringify(menu));
+    //let ls = localStorage.setItem("savedMenu", JSON.stringify(menu));
 
     function printItems(menu) {
         var wrapper = $('#wrapper'),
