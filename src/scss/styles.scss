@@ -2,7 +2,7 @@ $theme-colors: ( "primary": #fe8301);
 $primary-color:#fe8301;
 $body-bg: white;
 $secondary-color:#f2f2f2;
-$font: "Raleway";
+$font: "Raleway", sans-serif;
 .image-wrapper {
     margin-top: 50px;
     margin-bottom: 10px;
@@ -14,20 +14,6 @@ $font: "Raleway";
     .col-3:not(:hover) {
         opacity: 0.2;
     }
-}
-
-.row {
-    .del-btn {
-        button {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-}
-
-.image-style {
-    width: 100%;
 }
 
 .image-hover {
@@ -52,7 +38,7 @@ nav.navbar {
 h1,
 .navbar-brand,
 .navbar-nav a {
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     color: white;
     font-size: 12px;
     margin-right: 10px;
@@ -63,7 +49,7 @@ h1,
 #jumbotron-costum {
     background-image: url("../css/restaurante-cluj.jpg");
     color: white;
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     margin-bottom: 0px;
     min-height: 600px;
     background-repeat: no-repeat;
@@ -117,7 +103,7 @@ h1,
         position: absolute;
         width: 3px;
         height: 3px;
-        background: #fe8301;
+        background:$primary-color;
         top: 50%;
         margin-top: -2px;
         right: -3px;
@@ -160,10 +146,6 @@ h1,
 nav.bar-wrapper {
     margin: 0 0 0 0;
     padding-top: 10px;
-}
-
-.navbar select {
-    color: red;
 }
 
 .navbar .dropdown-menu:after {
@@ -233,7 +215,7 @@ nav.bar-wrapper {
     margin-right: 150px;
     margin-left: 150px;
     margin-top: 50px;
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     margin-bottom: 200px;
 }
 
@@ -248,7 +230,7 @@ nav.bar-wrapper {
         border-width: 3px;
         border-color: $secondary-color;
         padding-bottom: 20px;
-        background-color: $body-bg; //z-index: -1;
+        background-color: $body-bg;
     }
 }
 
@@ -258,7 +240,7 @@ nav.bar-wrapper {
 }
 
 .nav-price {
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     display: block;
     font-size: 12px;
     font-weight: 800;
@@ -271,7 +253,7 @@ nav.bar-wrapper {
 }
 
 .pricer {
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     display: block;
     font-size: 12px;
     font-weight: 800;
@@ -314,78 +296,6 @@ section .section-title {
 }
 
 #footer {
-    background: $primary-color !important;
+    background: $primary-color;
 }
-
-#footer h5 {
-    padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
-#footer ul.social li {
-    padding: 3px 0;
-}
-
-#footer ul.social li a i {
-    margin-right: 5px;
-    font-size: 25px;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-
-#footer ul.social li:hover a i {
-    font-size: 30px;
-    margin-top: -10px;
-}
-
-#footer ul.social li a,
-#footer ul.quick-links li a {
-    color: #ffffff;
-}
-
-#footer ul.social li a:hover {
-    color: #eeeeee;
-}
-
-#footer ul.quick-links li {
-    padding: 3px 0;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-
-#footer ul.quick-links li:hover {
-    padding: 3px 0;
-    margin-left: 5px;
-    font-weight: 700;
-}
-
-#footer ul.quick-links li a i {
-    margin-right: 5px;
-}
-
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
-}
-
-@media (max-width:767px) {
-    #footer h5 {
-        padding-left: 0;
-        border-left: transparent;
-        padding-bottom: 0px;
-        margin-bottom: 10px;
-    }
-}
-
 @import "node_modules/bootstrap/scss/bootstrap";

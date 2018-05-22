@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let rightPrice=document.querySelector('#right-price')
   let dropwdown_item = document.querySelector(".category-dropdown");
   let delFiters=document.querySelector("#del-filters");
+  $(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
   menu = JSON.parse(localStorage.getItem("savedMenu"));
 
   let slider2 = document.querySelector("#range2");
