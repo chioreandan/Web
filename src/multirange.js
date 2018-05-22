@@ -64,6 +64,7 @@ self.multirange = function(input) {
 	}
 
 	function update() {
+
 		ghost.style.setProperty("--low", 100 * ((input.valueLow - min) / (max - min)) + 1 + "%");
 		ghost.style.setProperty("--high", 100 * ((input.valueHigh - min) / (max - min)) - 1 + "%");
 	}

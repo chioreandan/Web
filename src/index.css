@@ -1,37 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Dr+Sugiyama);
-
 body {
 	padding: 0;
 	margin: 0;
 	font: 100%/1.5 Helvetica Neue, sans-serif;
 }
 
-
-
-
-
-
-
-
 .demo {
 	width: -moz-max-content;
 	width: max-content;
-	
 	text-align: center;
 	transform: scale(1);
-	margin-top:2px;
 
-	margin-right: 50px;
-	
-	
-
+	margin-right: 12px;
 }
 
-	.demo input {
+.demo input {}
 
-	}
-
-body > section h1 {
+body>section h1 {
 	color: red;
 }
-

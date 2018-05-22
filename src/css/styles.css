@@ -184,12 +184,6 @@ nav.bar-wrapper {
   font-family: "Raleway", sans-serif;
   margin-bottom: 200px; }
 
-#reinit-btn {
-  margin-bottom: 200px;
-  margin-left: 500px;
-  width: 200px;
-  height: 200px; }
-
 .row .col-3:not(:nth-of-type(4n+0)) {
   border-right: solid;
   border-width: 3px;
@@ -203,24 +197,29 @@ nav.bar-wrapper {
   background-color: white; }
 
 .slider-nav {
-  /* margin-top: auto;
-    margin-bottom: auto;
-
-    width: 250px;
-    height: 20px;*/
   display: flex;
   align-items: center; }
 
-#nav-price {
+.nav-price {
+  font-family: "Raleway", sans-serif;
   display: block;
   font-size: 12px;
   font-weight: 800;
   margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 90px;
+  margin-bottom: 5px;
+  margin-right: 12px;
   margin-left: auto;
   font-family: "Raleway";
   color: black; }
+
+.pricer {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 0px; }
 
 .slider-wrapper .slider {
   -webkit-appearance: none;

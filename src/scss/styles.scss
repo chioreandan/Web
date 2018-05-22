@@ -221,24 +221,20 @@ nav.bar-wrapper {
         margin-right: auto;
     }
 }
-#buton-but{
-    width:100px;
+
+#buton-but {
+    width: 100px;
     height: 40px;
     margin-right: 80px;
     margin-left: 80px;
 }
+
 .wrapper {
     margin-right: 150px;
     margin-left: 150px;
     margin-top: 50px;
     font-family: "Raleway", sans-serif;
     margin-bottom: 200px;
-}
-#reinit-btn{
-    margin-bottom: 200px;
-    margin-left:500px;
-    width:200px;
-    height: 200px;
 }
 
 .row {
@@ -257,25 +253,31 @@ nav.bar-wrapper {
 }
 
 .slider-nav {
-    /* margin-top: auto;
-    margin-bottom: auto;
-
-    width: 250px;
-    height: 20px;*/
     display: flex;
     align-items: center;
 }
 
-#nav-price {
+.nav-price {
+    font-family: "Raleway", sans-serif;
     display: block;
     font-size: 12px;
     font-weight: 800;
     margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 90px;
+    margin-bottom: 5px;
+    margin-right: 12px;
     margin-left: auto;
     font-family: $font;
     color: black;
+}
+
+.pricer {
+    font-family: "Raleway", sans-serif;
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 0px;
 }
 
 .slider-wrapper {

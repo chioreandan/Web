@@ -50,7 +50,6 @@
 	<script src="/js/popper.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/handlebars.min.js"></script>
-	<script src="../js/slider.js"></script>
 	<script src="../js/scriptTest.js"></script>
 	<script src="multirange.js"></script>
 	<script src="https://unpkg.com/wnumb@1.1.0"></script>
@@ -72,7 +71,7 @@
 						CATEGORY
 					</a>
 					<div class="dropdown-menu category-dropdown" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item"  href="#">Burgers</a>
+						<a class="dropdown-item" href="#">Burgers</a>
 						<a class="dropdown-item" href="#">Pizza</a>
 						<a class="dropdown-item" href="#">Meals</a>
 						<a class="dropdown-item" href="#">Soups</a>
@@ -86,7 +85,7 @@
 					</a>
 					<span class="caret"></span>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
+						<a id="del-filters" class="dropdown-item"  href="#">Delete filters</a>
 						<a class="dropdown-item" href="#">Another action</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="adminIndex.html">ADMIN</a>
@@ -106,17 +105,19 @@
 				</li>
 			</ul>
 			<div class="slider-nav ">
-				<p id="nav-price">PRICE</p>
-				<p id="p1"></p>
+				<p class="nav-price">PRICE</p>
+				<p id="left-price" class="pricer">&#36;0</p>
+
 				<section class="demo slider-Value">
 					<input type="range" multiple value="0,100" id="range2" />
 				</section>
+				<p id="right-price" class="pricer">&#36;100</p>
 			</div>
 		</div>
 	</nav>
 
 
-	<div class="container" >
+	<div class="container">
 		<div id="handle-test" class="row wrapper">
 
 		</div>

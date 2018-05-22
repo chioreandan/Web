@@ -76,8 +76,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       price: 21.33,
     }
   ]
-  reinit.addEventListener("Click", function () {
+  reinit.addEventListener("click", function () {
     let ls = localStorage.setItem("savedMenu", JSON.stringify(menu));
+    location.reload();
   })
 
 })
