@@ -22,6 +22,7 @@
 
 		input[type="range"].multirange::-moz-range-track {
 			border-color: transparent; /* needed to switch FF to "styleable" control */
+			
 		}
 
 	input[type="range"].multirange.ghost {
