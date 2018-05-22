@@ -77,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
     delFiters.addEventListener("click", function (e) {
       e.preventDefault();
+      k = menu;
+      currentCategory='';
       renderMenu(menu);
     })
   })
