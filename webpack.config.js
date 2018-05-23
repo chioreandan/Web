@@ -1,12 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    app: './src/app.js',
+    admin: './src/admin.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -39,8 +45,47 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.hbs$/,
+        loader: "handlebars-loader"
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[name].[ext]'
+          }
+        }]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Index',
+      filename: 'index.html',
+      template: 'src/index.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Admin',
+      filename: 'admin.html',
+      template: 'src/admin.html',
+      chunks: ['admin']
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/images',
+        to: 'images'
+      }
+    ]),
+  ]
 };

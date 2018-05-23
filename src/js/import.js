@@ -3,75 +3,75 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var reinit = document.querySelector("#reinit-btn");
 
   let menu = [{
-      pictureUrl: "../menu/americanBurger.jpg",
+      pictureUrl: "images/menu/americanBurger.jpg",
       name: 'American Burger',
       category: "Burgers",
       price: 17.29,
     },
     {
-      pictureUrl: "../menu/chickenburger.jpg",
+      pictureUrl: "images/menu/chickenburger.jpg",
       name: "Chicken Burger",
       category: "Burgers",
       price: 19.49,
     },
     {
-      pictureUrl: "../menu/grandeburger.jpg",
+      pictureUrl: "images/menu/grandeburger.jpg",
       name: "Grande Burger",
       category: "Burgers",
       price: 20.31,
     },
     {
-      pictureUrl: "../menu/Spring-Burger.jpg",
+      pictureUrl: "images/menu/Spring-Burger.jpg",
       name: "Spring Burger",
       category: "Burgers",
       price: 14.32,
     },
     {
-      pictureUrl: "../menu/chiftelute-cu-piure.jpg",
+      pictureUrl: "images/menu/chiftelute-cu-piure.jpg",
       name: "Chiftelute cu piure",
       category: "Meals",
       price: 23.32,
     },
     {
-      pictureUrl: "../menu/chilli-con-carne.jpg",
+      pictureUrl: "images/menu/chilli-con-carne.jpg",
       name: "Chilli con Carne",
       category: "Meals",
       price: 30.22,
     },
     {
-      pictureUrl: "../menu/ciorba-de-perisoare.jpg",
+      pictureUrl: "images/menu/ciorba-de-perisoare.jpg",
       name: "Ciorba de perisoare",
       category: "Soups",
       price: 9.49,
     },
     {
-      pictureUrl: "../menu/ciorba-radauteana.jpg",
+      pictureUrl: "images/menu/ciorba-radauteana.jpg",
       name: "Ciorba radauteana",
       category: "Soups",
       price: 8.99,
     },
     {
-      pictureUrl: "../menu/deliciosa.jpg",
+      pictureUrl: "images/menu/deliciosa.jpg",
       name: "Pizza deliciosa",
       category: "Pizza",
       price: 18.99,
 
     },
     {
-      pictureUrl: "../menu/paste.jpg",
+      pictureUrl: "images/menu/paste.jpg",
       name: "Paste",
       category: "Pasta",
       price: 20.33,
     },
     {
-      pictureUrl: "../menu/snitel-de-vita.jpg",
+      pictureUrl: "images/menu/snitel-de-vita.jpg",
       name: "Snitel de vita",
       category: "Meals",
       price: 20.33,
 
     },
     {
-      pictureUrl: "../menu/pizzaCasei.jpg",
+      pictureUrl: "images/menu/pizzaCasei.jpg",
       name: "Pizza case",
       category: "Pizza",
       price: 21.33,
