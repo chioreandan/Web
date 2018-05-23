@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     },
     {
       pictureUrl: "images/menu/pizzaCasei.jpg",
-      name: "Pizza case",
+      name: "Pizza casei",
       category: "Pizza",
       price: 21.33,
     }

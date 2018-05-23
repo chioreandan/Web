@@ -1,5 +1,8 @@
 var itemTemplate = require("../templates/item.hbs");
-
+let menu = JSON.parse(localStorage.getItem("savedMenu"));
+let leftPrice = document.querySelector('#left-price');
+let rightPrice = document.querySelector('#right-price')
+let currentCategory='';
 function renderMenu(k) {
   let itemsContainer = document.querySelector('#handle-test');
   if (itemsContainer !== undefined) {
@@ -27,8 +30,7 @@ function filterByPrice(menu, price) {
 }
 
 function filter(menu,price,category){
-  let leftPrice = document.querySelector('#left-price');
-  let rightPrice = document.querySelector('#right-price')
+
   let res = price.split(",");
   maxPrice = parseInt(res[1]);
   minPrice = parseInt(res[0]);
@@ -41,14 +43,22 @@ function filter(menu,price,category){
     }
   }
   return filtredMenu;
-
+}
+function sliderEvent(s){
+  if(currentCategory!=''){
+    k = filter(menu, s,currentCategory);
+  }
+  else{
+    k = filterByPrice(menu,s);
+  }
+  renderMenu(k);
+  console.log()
 }
 
 function renderItems() {
-  let menu = JSON.parse(localStorage.getItem("savedMenu"));
   $('index.html').html();
   let k = menu;
-  let currentCategory='';
+
   renderMenu(k);
 }
 
@@ -56,6 +66,7 @@ function intializeEventListeners() {
   let dropwdown_item = document.querySelector(".category-dropdown");
   let delFiters = document.querySelector("#del-filters");
   let slider2 = document.querySelector("#range2");
+  let sliderGhost=document.querySelector(".ghost");
 
   dropwdown_item.addEventListener("click", function (e) {
     e.preventDefault();
@@ -64,14 +75,21 @@ function intializeEventListeners() {
     renderMenu(k);
   })
 
-  slider2.addEventListener("click", function (e) {
-    console.log(e.target.value);
+  slider2.addEventListener("click", function(){
     if(currentCategory!=''){
       k = filter(menu, slider2.value,currentCategory);
     }
     else{
       k = filterByPrice(menu,slider2.value);
-
+    }
+    renderMenu(k);
+  });
+  sliderGhost.addEventListener("click",function(){
+    if(currentCategory!=''){
+      k = filter(menu, slider2.value,currentCategory);
+    }
+    else{
+      k = filterByPrice(menu,slider2.value);
     }
     renderMenu(k);
   })
@@ -80,7 +98,6 @@ function intializeEventListeners() {
     e.preventDefault();
     k = menu;
     currentCategory='';
-
     renderMenu(k);
   })
 }
@@ -89,8 +106,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   $(window).scroll(function () {
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
   });
-
   renderItems();
   intializeEventListeners();
-
 });

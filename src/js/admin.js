@@ -1,29 +1,29 @@
 var itemTemplate = require("../templates/adminItem.hbs");
+menu = JSON.parse(localStorage.getItem("savedMenu"));
+let modalSave = document.querySelector('#modal-save');
+var template = itemTemplate;
+let k = menu;
 
-document.addEventListener("DOMContentLoaded", function (event) {
-	menu = JSON.parse(localStorage.getItem("savedMenu"));
-	let modalSave = document.querySelector('#modal-save');
-	var template = itemTemplate;
-	var admin = document.querySelector('#admin-handle');
-	$('admin.html').html();
-	let k = menu;
-	if(admin.length > 0) {
-		renderAdminMenu(k);
-	}
-
-	function renderAdminMenu(k) {
-		admin.innerHTML = '';
+function renderAdminMenu(k) {
+	let itemsContainer = document.querySelector('#admin-handle');
+	if (itemsContainer !== undefined) {
+		itemsContainer.innerHTML = '';
 		for (let i = 0; i < k.length; i++) {
-			var html = template(k[i]);
-			admin.innerHTML += html;
+			var html = itemTemplate(k[i]);
+			itemsContainer.innerHTML += html;
 		}
 	}
+}
+function toLocalStorage(menu) {
+	let ls = localStorage.setItem("savedMenu", JSON.stringify(menu));
+}
+function renderItems() {
+	$('admin.html').html();
+	k = menu;
+	renderAdminMenu(k);
+}
+function initializeEventListeners() {
 	let btn = document.querySelectorAll('.buton-but');
-
-	function toLocalStorage(menu) {
-		let ls = localStorage.setItem("savedMenu", JSON.stringify(menu));
-	}
-
 	for (let i = 0; i < btn.length; i++) {
 		btn[i].addEventListener("click", function () {
 			let toDel = menu[i].name;
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		pictureUrl = tmppath;
 	});
 	modalSave.addEventListener("click", function () {
-		//let pictureUrl=document.getElementById('myImage').value;
 		let name = document.getElementById('nume-produs').value;
 		let category = document.getElementById('categorie-input').value;
 		let price = document.getElementById('price-input').value;
@@ -49,10 +48,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			category,
 			price
 		};
-		console.log(prod);
 		menu.push(prod);
-		console.log(menu);
 		renderAdminMenu(k);
 		let ls = localStorage.setItem("savedMenu", JSON.stringify(menu));
 	})
+}
+document.addEventListener("DOMContentLoaded", function (event) {
+	renderItems();
+	initializeEventListeners();
 })
