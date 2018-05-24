@@ -1,7 +1,7 @@
-var itemTemplate = require("../templates/adminItem.hbs");
+let itemTemplate = require("../templates/adminItem.hbs");
 menu = JSON.parse(localStorage.getItem("savedMenu"));
 let modalSave = document.querySelector('#modal-save');
-var template = itemTemplate;
+let template = itemTemplate;
 let items = menu;
 
 function renderAdminMenu(items) {
@@ -9,7 +9,7 @@ function renderAdminMenu(items) {
 	if (itemsContainer !== undefined) {
 		itemsContainer.innerHTML = '';
 		for (let i = 0; i < items.length; i++) {
-			var html = itemTemplate(items[i]);
+			let html = itemTemplate(items[i]);
 			itemsContainer.innerHTML += html;
 		}
 	}
@@ -19,8 +19,7 @@ function toLocalStorage(menu) {
 }
 function renderItems() {
 	$('admin.html').html();
-	items = menu;
-	renderAdminMenu(items);
+	renderAdminMenu(menu);
 }
 function initializeEventListeners() {
 	let btn = document.querySelectorAll('.buton-but');

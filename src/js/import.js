@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-  var reinit = document.querySelector("#reinit-btn");
+  let reinit = document.querySelector("#reinit-btn");
 
   let menu = [{
       pictureUrl: "images/menu/americanBurger.jpg",

@@ -324,12 +324,12 @@ section .section-title {
 		}
 
 		input[type="range"].multirange.original::-moz-range-thumb {
-			transform: scale(1); /* FF doesn't apply position it seems */
+			transform: scale(1);
 			z-index: 1;
 		}
 
 		input[type="range"].multirange::-moz-range-track {
-			border-color: transparent; /* needed to switch FF to "styleable" control */
+			border-color: transparent;
 
 		}
 
