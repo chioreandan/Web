@@ -1,4 +1,4 @@
-var itemTemplate = require("../templates/item.hbs");
+let itemTemplate = require("../templates/item.hbs");
 let menu = JSON.parse(localStorage.getItem("savedMenu"));
 let leftPrice = document.querySelector('#left-price');
 let rightPrice = document.querySelector('#right-price')
@@ -9,7 +9,7 @@ function renderMenu(items) {
   if (itemsContainer !== undefined) {
     itemsContainer.innerHTML = '';
     for (let i = 0; i < items.length; i++) {
-      var html = itemTemplate(items[i]);
+      let html = itemTemplate(items[i]);
       itemsContainer.innerHTML += html;
     }
   }
@@ -19,8 +19,8 @@ function filterByPrice(menu, price) {
   let res = price.split(",");
   maxPrice = parseInt(res[1]);
   minPrice = parseInt(res[0]);
-  leftPrice.innerHTML = "&#36;" + minPrice;
-  rightPrice.innerHTML = "&#36;" + maxPrice;
+  leftPrice.innerHTML = `&#36; ${minPrice}`;
+  rightPrice.innerHTML = `&#36; ${maxPrice}`;
   let filtredMenu = [];
   for (let i = 0; i < menu.length; i++) {
     if (menu[i].price >= minPrice && menu[i].price <= maxPrice) {
@@ -34,8 +34,8 @@ function filter(menu, price, category) {
   let res = price.split(",");
   maxPrice = parseInt(res[1]);
   minPrice = parseInt(res[0]);
-  leftPrice.innerHTML = "&#36;" + minPrice;
-  rightPrice.innerHTML = "&#36;" + maxPrice;
+  leftPrice.innerHTML = `&#36; ${minPrice}`;
+  rightPrice.innerHTML = `&#36; ${maxPrice}`;
   let filtredMenu = [];
   for (let i = 0; i < menu.length; i++) {
     if (menu[i].price >= minPrice && menu[i].price <= maxPrice && menu[i].category === category) {
