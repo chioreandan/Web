@@ -2,7 +2,7 @@ $theme-colors: ( "primary": #fe8301);
 $primary-color:#fe8301;
 $body-bg: white;
 $secondary-color:#f2f2f2;
-$font: "Raleway";
+$font: "Raleway", sans-serif;
 .image-wrapper {
     margin-top: 50px;
     margin-bottom: 10px;
@@ -10,20 +10,10 @@ $font: "Raleway";
 
 .image-hover:hover {
     transform: scale(1.25);
-}
-
-.row {
-    .del-btn {
-        button {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    z-index: 2;
+    .col-3:not(:hover) {
+        opacity: 0.2;
     }
-}
-
-.image-style {
-    width: 100%;
 }
 
 .image-hover {
@@ -48,7 +38,7 @@ nav.navbar {
 h1,
 .navbar-brand,
 .navbar-nav a {
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     color: white;
     font-size: 12px;
     margin-right: 10px;
@@ -57,9 +47,9 @@ h1,
 }
 
 #jumbotron-costum {
-    background-image: url("../css/restaurante-cluj.jpg");
+    background-image: url("images/restaurante-cluj.jpg");
     color: white;
-    font-family: "Raleway", sans-serif;
+    font-family: $font;
     margin-bottom: 0px;
     min-height: 600px;
     background-repeat: no-repeat;
@@ -113,7 +103,7 @@ h1,
         position: absolute;
         width: 3px;
         height: 3px;
-        background: #fe8301;
+        background:$primary-color;
         top: 50%;
         margin-top: -2px;
         right: -3px;
@@ -156,10 +146,6 @@ h1,
 nav.bar-wrapper {
     margin: 0 0 0 0;
     padding-top: 10px;
-}
-
-.navbar select {
-    color: red;
 }
 
 .navbar .dropdown-menu:after {
@@ -218,13 +204,19 @@ nav.bar-wrapper {
     }
 }
 
-#wrapper {
+#buton-but {
+    width: 100px;
+    height: 40px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.wrapper {
     margin-right: 150px;
     margin-left: 150px;
     margin-top: 50px;
-    font-family: "Raleway", sans-serif;
-    margin-bottom: 1000px;
-    
+    font-family: $font;
+    margin-bottom: 200px;
 }
 
 .row {
@@ -238,30 +230,57 @@ nav.bar-wrapper {
         border-width: 3px;
         border-color: $secondary-color;
         padding-bottom: 20px;
+        background-color: $body-bg;
     }
 }
 
 .slider-nav {
-    /* margin-top: auto;
-    margin-bottom: auto;
-   
-    width: 250px;
-    height: 20px;*/
-   
     display: flex;
     align-items: center;
 }
 
-#nav-price {
+.nav-price {
+    font-family: $font;
     display: block;
     font-size: 12px;
     font-weight: 800;
     margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
+    margin-bottom: 5px;
+    margin-right: 12px;
     margin-left: auto;
     font-family: $font;
     color: black;
+}
+
+.pricer {
+    font-family: $font;
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.slider-wrapper {
+    .slider {
+        -webkit-appearance: none;
+        border: 0 0 0 0;
+        width: 200px;
+        margin-right: 0;
+        margin-left: 0;
+        height: 25px;
+        background: $body-bg;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+}
+
+#myRange {
+    margin-right: -80px;
+    overflow: hidden;
 }
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -277,78 +296,59 @@ section .section-title {
 }
 
 #footer {
-    background: $primary-color !important;
+    background: $primary-color;
 }
 
-#footer h5 {
-    padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color: #ffffff;
+.demo {
+	width: -moz-max-content;
+	width: max-content;
+	text-align: center;
+	transform: scale(1);
+	margin-right: 12px;
 }
+@supports (--css: variables) {
+	input[type="range"].multirange {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
 
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
+	input[type="range"].multirange.original {
+		position: absolute;
+	}
+
+		input[type="range"].multirange.original::-webkit-slider-thumb {
+			position: relative;
+			z-index: 2;
+		}
+
+		input[type="range"].multirange.original::-moz-range-thumb {
+			transform: scale(1); /* FF doesn't apply position it seems */
+			z-index: 1;
+		}
+
+		input[type="range"].multirange::-moz-range-track {
+			border-color: transparent; /* needed to switch FF to "styleable" control */
+
+		}
+
+	input[type="range"].multirange.ghost {
+		position: relative;
+		background: var(--track-background);
+		--track-background: linear-gradient(to right,
+				transparent var(--low), var(--range-color) 0,
+				var(--range-color) var(--high), transparent 0
+			) no-repeat 0 45% / 100% 40%;
+		--range-color:orange;
+	}
+
+		input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
+			background: var(--track-background);
+		}
+
+		input[type="range"].multirange.ghost::-moz-range-track {
+			background: var(--track-background);
+		}
+
 }
-
-#footer ul.social li {
-    padding: 3px 0;
-}
-
-#footer ul.social li a i {
-    margin-right: 5px;
-    font-size: 25px;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-
-#footer ul.social li:hover a i {
-    font-size: 30px;
-    margin-top: -10px;
-}
-
-#footer ul.social li a,
-#footer ul.quick-links li a {
-    color: #ffffff;
-}
-
-#footer ul.social li a:hover {
-    color: #eeeeee;
-}
-
-#footer ul.quick-links li {
-    padding: 3px 0;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-
-#footer ul.quick-links li:hover {
-    padding: 3px 0;
-    margin-left: 5px;
-    font-weight: 700;
-}
-
-#footer ul.quick-links li a i {
-    margin-right: 5px;
-}
-
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
-}
-
-@media (max-width:767px) {
-    #footer h5 {
-        padding-left: 0;
-        border-left: transparent;
-        padding-bottom: 0px;
-        margin-bottom: 10px;
-    }
-}
-
-@import "node_modules/bootstrap/scss/bootstrap";
